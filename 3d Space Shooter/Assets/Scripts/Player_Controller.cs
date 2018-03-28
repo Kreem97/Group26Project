@@ -57,7 +57,7 @@ public class Player_Controller : MonoBehaviour {
         transform.position = pos;
 		
 		//enemy info toggle
-		if(Input.GetKey (KeyCode.I)){
+		if(Input.GetKey (KeyCode.C)){
 			print("you got served");
 		}
     }
