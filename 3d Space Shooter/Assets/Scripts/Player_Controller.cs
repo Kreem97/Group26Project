@@ -55,11 +55,6 @@ public class Player_Controller : MonoBehaviour {
         pos -= rot * velocity;
 
         transform.position = pos;
-		
-		//enemy info toggle
-		if(Input.GetKey (KeyCode.C)){
-			print("you got served");
-		}
     }
 
 

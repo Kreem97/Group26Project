@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.57481706, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -1809,6 +1809,34 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c9e7a2f2320309d4b930c940d194fa9c, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &494184581 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1924447412616352, guid: c9e7a2f2320309d4b930c940d194fa9c,
+    type: 2}
+  m_PrefabInternal: {fileID: 494184580}
+--- !u!114 &494184582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 494184581}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 811a66f4aec7dd8499e6cd4e9abb1ed1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &494184586
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 494184581}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d4d85b068790964f839cab2d4573515, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shipSelector: {fileID: 0}
 --- !u!1 &500266342
 GameObject:
   m_ObjectHideFlags: 0
