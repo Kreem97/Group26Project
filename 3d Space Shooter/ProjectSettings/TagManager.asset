@@ -5,6 +5,11 @@ TagManager:
   serializedVersion: 2
   tags:
   - Boundry
+  - Enemy
+  - asteroid
+  - scrap
+  - Station
+  - coin
   layers:
   - Default
   - TransparentFX
