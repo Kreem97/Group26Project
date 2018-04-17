@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.UI;
 
 [System.Serializable]
 
@@ -10,8 +9,6 @@ public class CharacterStats : MonoBehaviour
 
 	public Stat damage;
 	public Stat armor;
-
-	public Image enemyHealthBar;
 
 	void Awake()
 	{	
@@ -37,7 +34,6 @@ public class CharacterStats : MonoBehaviour
 			damage = 0;
 		}
 		currentHealth -= damage;
-		enemyHealthBar.fillAmount = currentHealth / maxHealth;
 		// Debug.Log(transform.name + " takes " + damage + " damage.");
 
 		if(currentHealth <= 0)
