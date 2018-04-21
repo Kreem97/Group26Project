@@ -3,6 +3,10 @@ using UnityEngine.UI;
 using System;
 
 
+<<<<<<< HEAD
+
+=======
+>>>>>>> d09081039ed77ece71ce8e8fed45f2a198be8fb8
 public class EnemyController : MonoBehaviour
 {
 	// public GameObject enemy;
@@ -13,6 +17,11 @@ public class EnemyController : MonoBehaviour
 	// public GameObject self;
 
 
+<<<<<<< HEAD
+
+	void Start()
+	{
+=======
 	//Shooting variables
 	public GameObject shot;
 	public Transform shotSpawn;
@@ -31,11 +40,29 @@ public class EnemyController : MonoBehaviour
 		fireRate = enemyStats.fireRate.getValue();
 		MoveSpeed = enemyStats.speed.getValue();
 		Max = enemyStats.engageRange.getValue();
+>>>>>>> d09081039ed77ece71ce8e8fed45f2a198be8fb8
 		InvokeRepeating("Update", 1, 1);
 	}
 
 	void Update()
 	{
+<<<<<<< HEAD
+		transform.LookAt(Player);
+			if(Vector3.Distance(transform.position, Player.position) >= Min)
+			{
+				// Debug.Log(transform.forward);
+				if (transform.forward == new Vector3(0,0,0))
+				{
+					transform.forward = new Vector3(0, 0, 1);
+				}
+				transform.position += transform.forward*MoveSpeed*Time.deltaTime;
+			
+				if(Vector3.Distance(transform.position, Player.position) <= Max)
+				{
+					return;
+				}
+			}
+=======
 		//Distance from player
 		dist = Vector3.Distance(Player.position, transform.position);
 		// Debug.Log (dist);
@@ -79,6 +106,7 @@ public class EnemyController : MonoBehaviour
 				transform.LookAt(Player);
 			}
 		}
+>>>>>>> d09081039ed77ece71ce8e8fed45f2a198be8fb8
 
 	}
 }

@@ -4,11 +4,14 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
+<<<<<<< HEAD
+=======
 
 [System.Serializable]
 
+>>>>>>> d09081039ed77ece71ce8e8fed45f2a198be8fb8
 public class Player_Controller : MonoBehaviour {
-    public float maxSpeed = 3f;
+    public float maxSpeed;
     public float rotationSpeed = 180f;
 
     //publics for the lasers
@@ -24,18 +27,29 @@ public class Player_Controller : MonoBehaviour {
 
     public int coin = 0;
     public Text playerCoin;
+<<<<<<< HEAD
+=======
 	public Slider healthBar;
-	public static CharacterStats myStats;
+	public static PlayerStats myStats;
+
 
 
 	void Start()
 	{
-		myStats = GetComponent<CharacterStats>();
+		myStats = GetComponent<PlayerStats>();
+        maxSpeed = myStats.speed.getValue();
 	}
+>>>>>>> d09081039ed77ece71ce8e8fed45f2a198be8fb8
 
     // Use this for initialization
     void Update()
     {
+
+        if(EventSystem.current.IsPointerOverGameObject())
+        {
+            return;
+        }
+
 		//Prevents shot from fireing while game is paused
 		if (!Pause_Menu.GameIsPaused) 
 		{
@@ -51,6 +65,7 @@ public class Player_Controller : MonoBehaviour {
     // Update is called once per frame
     void FixedUpdate()
     {
+        maxSpeed = myStats.speed.getValue();
 
         //grab the rotation quarternion
         Quaternion rot = transform.rotation;
@@ -75,11 +90,16 @@ public class Player_Controller : MonoBehaviour {
         pos -= rot * velocity;
 
         transform.position = pos;
+<<<<<<< HEAD
+    }
+
+=======
         
         healthBar.value = myStats.currentHealth;
     }
 
 
+>>>>>>> d09081039ed77ece71ce8e8fed45f2a198be8fb8
     //collecting scrap/coin
     void OnTriggerEnter(Collider other)
     {
@@ -106,6 +126,9 @@ public class Player_Controller : MonoBehaviour {
             storeUI.SetActive(true);
         }
     }
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> d09081039ed77ece71ce8e8fed45f2a198be8fb8
 }
