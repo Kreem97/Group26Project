@@ -4,9 +4,12 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
+<<<<<<< HEAD
+=======
 
 [System.Serializable]
 
+>>>>>>> d09081039ed77ece71ce8e8fed45f2a198be8fb8
 public class Player_Controller : MonoBehaviour {
     public float maxSpeed;
     public float rotationSpeed = 180f;
@@ -24,6 +27,8 @@ public class Player_Controller : MonoBehaviour {
 
     public int coin = 0;
     public Text playerCoin;
+<<<<<<< HEAD
+=======
 	public Slider healthBar;
 	public static PlayerStats myStats;
 
@@ -34,6 +39,7 @@ public class Player_Controller : MonoBehaviour {
 		myStats = GetComponent<PlayerStats>();
         maxSpeed = myStats.speed.getValue();
 	}
+>>>>>>> d09081039ed77ece71ce8e8fed45f2a198be8fb8
 
     // Use this for initialization
     void Update()
@@ -84,11 +90,16 @@ public class Player_Controller : MonoBehaviour {
         pos -= rot * velocity;
 
         transform.position = pos;
+<<<<<<< HEAD
+    }
+
+=======
         
         healthBar.value = myStats.currentHealth;
     }
 
 
+>>>>>>> d09081039ed77ece71ce8e8fed45f2a198be8fb8
     //collecting scrap/coin
     void OnTriggerEnter(Collider other)
     {
@@ -115,6 +126,9 @@ public class Player_Controller : MonoBehaviour {
             storeUI.SetActive(true);
         }
     }
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> d09081039ed77ece71ce8e8fed45f2a198be8fb8
 }
